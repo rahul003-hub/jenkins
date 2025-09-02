@@ -43,14 +43,6 @@ pipeline {
             }
         }
 
-        stage('Cleanup') {
-            steps {
-                script {
-                    echo "Cleaning up container..."
-                    sh "docker stop myapp_container || true"
-                    sh "docker rm myapp_container || true"
-                }
-            }
-        }
+        
     }
 }
